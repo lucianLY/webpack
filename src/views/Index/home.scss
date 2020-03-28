@@ -1,0 +1,120 @@
+.main{
+  .header{
+    
+    .header-layer{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      .welcome{
+        width: 42.8125%;
+        .logo{
+          color: #286EDC;
+          font-size: 60px;
+          margin-top: 50px;
+          margin-left: 45px;
+        }
+        
+      }
+      .banner{
+        width: 100%;
+        background-image: url('/assets/images/banner.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        &:before{
+          content: "";
+          display: block;
+          padding-top: 100%;
+        }
+        display: flex;
+        flex-direction: row;
+        padding-top: 99px;
+        .nav{
+          display: flex;
+          flex-direction: row;
+          padding-left: 13%;
+          width: 84%;
+          color: #fff;
+          .item{
+            width: 36px;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 8.5610%;
+            font-size: 14px;
+            &:nth-child(1){
+              margin-left: 0;
+            }
+            &.private{
+              width: 72px;
+              line-height: 30px;
+            }
+          }
+          
+          .item-btn{
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 15px;
+            color: #000;
+            margin-right: 10px;
+            &:nth-child(2){
+              margin-right: 0;
+            }
+            &.active{
+              color: #1580FE;
+            }
+          }
+        }
+        .search{
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    }
+    .header-body{
+      position: absolute;
+      top: 143px;
+      left: 50%;
+      margin-left: -600px;
+      width: 1200px;
+      .travel-title{
+        width: 331px;
+        height: 118px;
+        font-size: 42px;
+        color: #000000;
+        letter-spacing: 5.25px;
+      }
+      .travel-sub{
+        color: #ACA9BC;
+        font-size: 14px;
+        margin-top: 25px;
+        width: 363px;
+        height: 80px;
+        letter-spacing: 1.75px;
+        line-height: 40px;
+      }
+      .start{
+        margin-top: 61px;
+        width: 246px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        opacity: 0.94;
+        background: #588EE3;
+        box-shadow: 0 6px 20px 0 rgba(153,153,153,0.50);
+        border-radius: 40px;
+        border-radius: 40px;
+      }
+    }
+  }
+  .body{
+    width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: red;
+  }
+  
+}
