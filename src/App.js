@@ -9,11 +9,11 @@ import Index from './views/Index/index';
 
 const App = () => (
     <div>
-        <MetaTags>
+        {/* <MetaTags>
             <title>PH VISA</title>
             <meta name="description" content="Some description." />
             <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-          </MetaTags>
+          </MetaTags> */}
         <Router>
             <Switch>
                 <Route exact path="/" component={Index} />

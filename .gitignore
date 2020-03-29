@@ -1,3 +1,4 @@
-node_monules/
+node_monules/*
+/node_monules/*
 
 *.zip
