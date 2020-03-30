@@ -1,7 +1,21 @@
 import React from 'react'
 import './home.scss'
+import Title from 'antd/lib/skeleton/Title';
 
 class Home extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            guides: [
+                {'title': '标题', 'pic' : 'hot.png'},
+                {'title': '标题', 'pic' : 'hot.png'},
+                {'title': '标题', 'pic' : 'hot.png'},
+                {'title': '标题', 'pic' : 'hot.png'}
+            ]
+        }
+    }
+
     render() {
         return (
             <div className='main'>
@@ -40,9 +54,33 @@ class Home extends React.Component {
                     </div>
                 </div>
                 <div className="body">
-                    正文部分
-                    <div className="banner">
-                        <img src='/assets/images/banner.png' />
+                    <div className="hot">
+                        <div className='raiders'>
+                            热门旅游攻略
+                        </div>
+                        <div className='sub'>
+                            HOT TRAVEL GUIDES
+                        </div>
+                        <div className="line"></div>
+                        <div className='hot-map'>
+                            {
+                                this.state.guides.map( (item, index) => {
+                                    return (
+                                    <div className='item' key={index} >
+                                        <div className="img">
+                                            <img src={require("./images/" + item.pic)} />
+                                        </div>
+                                        <div className="title">
+                                            标题
+                                        </div>
+                                        <div className="view">
+                                            去看看
+                                        </div>
+                                    </div>
+                                )
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
                 

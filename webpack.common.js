@@ -39,10 +39,10 @@ module.exports = {
           test: /\.(eot|woff2?|ttf|svg)$/,
           use: [
             {
-              loader: "url-loader",
+              loader: "file-loader",
               options: {
                 name: "[name]-[hash:5].min.[ext]",
-                limit: 3000, // size <= 3000B, 改成5000B试试?  
+                limit: 1024, 
                 publicPath: "asstes/fonts/",
                 outputPath: "asstes/fonts/"
               }
@@ -56,7 +56,11 @@ module.exports = {
               loader:"url-loader",
               // loader: 'url-loader?limit=8192&name=assets/images/[hash:8].[name].[ext]',
               options: {
-                publicPath: "asstes/images/",
+                esModule: false,
+                name: "[hash:8].[ext]",
+                limit: 1024, 
+                publicPath: "../asstes/images/",
+                outputPath: "../asstes/images/",
                 outputPath: "asstes/images/"
               },
             }
