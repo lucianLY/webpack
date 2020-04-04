@@ -59,8 +59,9 @@ module.exports = {
                 esModule: false,
                 name: "[hash:8].[ext]",
                 limit: 1024, 
+
+                outputPath: "./asstes/images/",
                 publicPath: "../asstes/images/",
-                outputPath: "../asstes/images/",
                 outputPath: "asstes/images/"
               },
             }
