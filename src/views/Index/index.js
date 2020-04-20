@@ -12,6 +12,13 @@ class Home extends React.Component {
                 {'title': '标题', 'pic' : 'hot.png'},
                 {'title': '标题', 'pic' : 'hot.png'},
                 {'title': '标题', 'pic' : 'hot.png'}
+            ],
+            travel:[
+                {'title': '标题', 'pic' : 'hot.png'},
+                {'title': '标题', 'pic' : 'hot.png'},
+                {'title': '标题', 'pic' : 'hot.png'},
+                {'title': '标题', 'pic' : 'hot.png'},
+                {'title': '标题', 'pic' : 'hot.png'},
             ]
         }
     }
@@ -73,6 +80,9 @@ class Home extends React.Component {
                                         <div className="title">
                                             标题
                                         </div>
+                                        <div className="main">
+                                            内容内容~~~~~
+                                        </div>
                                         <div className="view">
                                             去看看
                                         </div>
@@ -89,6 +99,7 @@ class Home extends React.Component {
                         <div className='sub'>
                             POPULAR HOMESTAY RECOMMENDATION
                         </div>
+                        <div className="line"></div>
                         <div className="hot-border">
                             <div className="hot-source">
                                 <div className="img">
@@ -111,14 +122,43 @@ class Home extends React.Component {
                                         这里是内容简介，这里是内容简介，这里是内容简介，
                                         这里是内容简介，这里是内容简介，这里是内容简介，
                                     </div>
+                                    <div className="subscribe">
+                                        立即订阅
+                                    </div>
                                 </div>
                                 <div className="img">
                                     <img src={require("./images/item-2.png")} />
                                 </div>
                             </div>
                         </div>
-                        
-                        
+                    </div>
+                    <div className="hot">
+                        <div className='raiders'>
+                            精品一日游推荐
+                        </div>
+                        <div className='sub'>
+                            HOT TRAVEL GUIDES
+                        </div>
+                        <div className="line"></div>
+                        <div className='hot-travel-map'>
+                            {
+                                this.state.travel.map( (item, index) => {
+                                    return (
+                                    <div className='item' key={index} >
+                                        <div className="img">
+                                            <img src={require("./images/" + item.pic)} />
+                                        </div>
+                                        <div className="title">
+                                            标题
+                                        </div>
+                                        <div className="view">
+                                            去看看
+                                        </div>
+                                    </div>
+                                )
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
