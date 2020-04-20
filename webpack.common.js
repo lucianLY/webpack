@@ -53,16 +53,15 @@ module.exports = {
           test: /\.(png|jpg|gif)$/,
           use: [
             {
-              loader:"url-loader",
+              loader:"file-loader",
               // loader: 'url-loader?limit=8192&name=assets/images/[hash:8].[name].[ext]',
               options: {
                 esModule: false,
-                name: "[hash:8].[ext]",
+                name: "./[hash:8].[ext]",
                 limit: 1024, 
-
                 outputPath: "./asstes/images/",
+                publicPath: "asstes/images/",
                 publicPath: "../asstes/images/",
-                outputPath: "asstes/images/"
               },
             }
           ]

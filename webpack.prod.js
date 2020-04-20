@@ -13,8 +13,8 @@ module.exports = merge(webpackConfig, {
     ],
     output: {
         path: path.join(__dirname, "./dist"),
-        filename: '[name].[hash:5].js',
-        publicPath: '/',
+        filename: './[name].[hash].js',
+        publicPath: "./" 
     },
     plugins: [
         new CleanWebpackPlugin(),
