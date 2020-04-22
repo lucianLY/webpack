@@ -1,6 +1,8 @@
 import React from 'react'
 import './home.scss'
-import Title from 'antd/lib/skeleton/Title';
+import Title from 'antd/lib/skeleton/Title'
+import Index from "./components/index"
+
 
 class Home extends React.Component {
 
@@ -21,6 +23,22 @@ class Home extends React.Component {
                 {'title': '标题', 'pic' : 'hot.png'},
             ]
         }
+    }
+
+    componentWillMount(){
+        console.log('在渲染前----fetch data会执行两次，一次在服务器端一次在客户端')
+    }
+
+    componentDidMount(){
+        console.log('第一次渲染之后 函数中发送ajax请求，拿到数据，通过setState()保存在state中')
+    }
+
+    componentWillReceiveProps(){
+        console.log('接受到一个新的prop')
+    }
+
+    view(index){
+        console.log('On click view' + index )
     }
 
     render() {
@@ -83,7 +101,7 @@ class Home extends React.Component {
                                         <div className="main">
                                             内容内容~~~~~
                                         </div>
-                                        <div className="view">
+                                        <div className="view" onClick={this.view.bind(index)}>
                                             去看看
                                         </div>
                                     </div>
@@ -161,6 +179,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Index/>
             </div>
         )
     }
